@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>3Damned</name>
+	<description>And I will strike down upon thee with great vengeance and furious anger those who attempt to print guns at public libraries.
+
+This is on-hold because the American court system struck down the action that would have allowed this to be legal, therefore undermining the urgency of the project.
+
+I'm still going to prototype it soon, probably this weekend.</description>
+	<url>https://github.com/markd315/3Damned</url>
+	<inceptionYear>8/1/2018</inceptionYear>
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/markd315/3Damned</url>
+	</issueManagement>
+	<groupId>threedamned</groupId>
+	<artifactId>3323493298439213429842353421453</artifactId>
+	<version>1.0.0</version>
+	<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+  			<groupId>com.fasterxml.jackson.core</groupId>
+  			<artifactId>jackson-annotations</artifactId>
+  			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+  			<groupId>com.fasterxml.jackson.core</groupId>
+  			<artifactId>jackson-databind</artifactId>
+ 			<version>2.9.2</version>
+		</dependency>
+	</dependencies>
+</project>
