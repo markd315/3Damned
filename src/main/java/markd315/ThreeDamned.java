@@ -10,15 +10,22 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Set;
-import javax.xml.bind.DatatypeConverter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 public class ThreeDamned{
 
 	private static Set<String> hashBlacklist;
 	private static Set<String> userBlacklist;
 	private static boolean isLoaded = false;
+    public static final String userProdPath = "src/main/resources/userBlacklist.json";
+    public static final String hashProdPath = "src/main/resources/hashBlacklist.json";
+    public static final String userTestPath = "src/main/resources/test/userTestBlacklist.json";
+    public static final String hashTestPath = "src/main/resources/test/hashTestBlacklist.json";
+    public static final boolean testMode = true;
+    private static String hashPath;
+    private static String userPath;
 
     public static boolean notOnBlacklist(String stl) throws IOException {
         loadListsIfNot();
@@ -41,7 +48,7 @@ public class ThreeDamned{
         if (hashBlacklist.contains(sha1)) {
             userBlacklist.add(username);//Ban the user from generating documents in the future.
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(new File("src/main/resources/userTestBlacklist.json"), userBlacklist);
+            mapper.writeValue(new File(userPath), userBlacklist);
             return false;
         }
         return true;
@@ -52,11 +59,11 @@ public class ThreeDamned{
         String sha1 = toSHA1(contents.getBytes());
         hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
         ObjectMapper mapper = new ObjectMapper();
-        mapper.writeValue(new File("src/main/resources/hashTestBlacklist.json"), userBlacklist);
+        mapper.writeValue(new File(hashPath), userBlacklist);
     }
 
 
-	private static String toSHA1(byte[] toConvert) throws UnsupportedEncodingException {
+	private static String toSHA1(byte[] toConvert){
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA-1");
@@ -64,24 +71,32 @@ public class ThreeDamned{
             e.printStackTrace();
         }
         byte[] hashed = md.digest(toConvert);
-        return new String(DatatypeConverter.printBase64Binary(hashed));
+        return Base58.encode(hashed);
     }
 
 	private static void loadListsIfNot(){
-		if(isLoaded) {
-			return;
-		}
+        if(isLoaded) {
+            return;
+        }
+        if(testMode){
+		    hashPath = hashTestPath;
+            userPath = userTestPath;
+        }else{
+            hashPath = hashProdPath;
+            userPath = userProdPath;
+        }
+
 		//Loading blacklists into memory
 		ObjectMapper mapper = new ObjectMapper();
 		String json;
 		try {
-			json = readFile("src/main/resources/hashTestBlacklist.json", Charset.defaultCharset());
+			json = readFile(hashPath, Charset.defaultCharset());
 			hashBlacklist = mapper.readValue(json, new TypeReference<Set<String>>(){});
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
         try {
-            json = readFile("src/main/resources/userTestBlacklist.json", Charset.defaultCharset());
+            json = readFile(userPath, Charset.defaultCharset());
             userBlacklist = mapper.readValue(json, new TypeReference<Set<String>>(){});
         } catch (IOException e) {
             e.printStackTrace();
