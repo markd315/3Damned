@@ -11,6 +11,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.List;
+import java.util.Set;
 
 import javax.xml.bind.DatatypeConverter;
 
@@ -19,8 +20,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ThreeDamned {
 
-	private static List<String> hashBlacklist;
-	private static List<String> userBlacklist;
+	private static Set<String> hashBlacklist;
+	private static Set<String> userBlacklist;
 
 	private static boolean isLoaded = false; 
 	
@@ -35,18 +36,40 @@ public class ThreeDamned {
         return new String(DatatypeConverter.printBase64Binary(hashed));
     }
 
-	public boolean compareAgainstBlacklist(File stl) {
+	public static boolean notOnBlacklist(String stl) throws IOException {
 		if(!isLoaded) {
 			loadList();
 		}
-		//TODO unimplemented
-		return false;
+		String contents = readFile(stl, Charset.defaultCharset());
+		String sha1 = toSHA1(contents.getBytes());
+		if(hashBlacklist.contains(sha1)) {
+            return false;
+		}
+		return true;
+	}
+
+    public static boolean notOnBlacklist(String stl, String username) throws IOException {
+        if(!isLoaded) {
+            loadList();
+        }
+        String contents = readFile(stl, Charset.defaultCharset());
+        String sha1 = toSHA1(contents.getBytes());
+        if(userBlacklist.contains(username)){
+            return false;
+        }
+
+        if (hashBlacklist.contains(sha1)) {
+            userBlacklist.add(username);//Ban the user from generating documents in the future.
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.writeValue(new File("src/main/resources/userTestBlacklist.json"), userBlacklist);
+        }
+        return true;
 	}
 	
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		loadList();
 		byte[] bytee = new byte[1];
-		bytee[0] = 12;
+		bytee[0] = 56;
 		System.out.println(toSHA1(bytee));
 	}
 	
@@ -59,8 +82,8 @@ public class ThreeDamned {
 		ObjectMapper mapper = new ObjectMapper();
 		String json;
 		try {
-			json = readFile("src/main/resources/hashTestBlacklist.json", StandardCharsets.UTF_8);
-			hashBlacklist = mapper.readValue(json, new TypeReference<List<String>>(){});
+			json = readFile("src/main/resources/hashTestBlacklist.json", Charset.defaultCharset());
+			hashBlacklist = mapper.readValue(json, new TypeReference<Set<String>>(){});
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

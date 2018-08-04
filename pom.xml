@@ -16,7 +16,7 @@ I'm still going to prototype it soon, probably this weekend.</description>
 		<url>https://github.com/markd315/3Damned</url>
 	</issueManagement>
 	<groupId>threedamned</groupId>
-	<artifactId>3323493298439213429842353421453</artifactId>
+	<artifactId>3Damned</artifactId>
 	<version>1.0.0</version>
 	<dependencies>
 		<dependency>
@@ -39,5 +39,11 @@ I'm still going to prototype it soon, probably this weekend.</description>
 			<artifactId>jaxb-api</artifactId>
 			<version>2.1</version>
 		</dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 </project>
