@@ -1,7 +1,6 @@
-package test;
+package markd315;
 
-import static org.junit.Assert.*;
-
+import markd315.ThreeDamned;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,7 +15,7 @@ public class HashesMatchedAreBlocked {
 
 	@Test
 	public void test() throws IOException {
-	    String testCase = "src/main/resources/rejectedCase.json"; //One byte, ASCII 56.
-	    Assert.assertFalse(main.java.ThreeDamned.notOnBlacklist(testCase));
+	    String testCase = "src/main/resources/test/rejectedCase.json"; //One byte, ASCII 56.
+	    Assert.assertFalse(ThreeDamned.notOnBlacklist(testCase));
 	}
 }

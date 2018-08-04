@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ec434a-4bce-4ecd-a27a-16f0d52ecd9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hashTestBlacklist_bk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/temp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userTestBlacklist_bk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/UserBlackListMaintained.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ThreeDamned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ThreeDamned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hashTestBlacklist.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hashTestBlacklist.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/testInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testInfo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ThreeDamned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/markd315/ThreeDamned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hashTestBlacklist.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/hashTestBlacklist.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hashTestBlacklist_bk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/hashTestBlacklist_bk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/passesCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/passesCase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rejectedCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/rejectedCase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/temp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/temp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/testInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userTestBlacklist.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/userTestBlacklist.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userTestBlacklist_bk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test/userTestBlacklist_bk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/UserBlackListMaintained.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/WrongHashesNotBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +29,7 @@
     <SUITE FILE_PATH="coverage/3Damned$Suite.ic" NAME="Suite Coverage Results" MODIFIED="1533356581243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="169" />
+    <option name="myElementSize" value="159" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1198081217">
@@ -37,48 +43,60 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="java" value="17" />
           <entry key="json" value="19" />
-          <entry key="md" value="4" />
+          <entry key="md" value="5" />
           <entry key="rejectedCase" value="1" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="17" />
           <entry key="JSON" value="17" />
-          <entry key="Markdown" value="4" />
+          <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1336" />
+          <entry key="java" value="1489" />
           <entry key="json" value="83" />
-          <entry key="md" value="147" />
-          <entry key="xml" value="8" />
+          <entry key="md" value="272" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1336" />
+          <entry key="JAVA" value="1489" />
           <entry key="JSON" value="82" />
-          <entry key="Markdown" value="147" />
+          <entry key="Markdown" value="272" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="8" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/markd315/ThreeDamned.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ThreeDamned.java">
+        <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="61">
+              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,83 +105,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/testInfo.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hashTestBlacklist_bk.json">
+        <entry file="file://$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="45" selection-start-column="44" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/passesCase.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/rejectedCase.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" lean-forward="true" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="666" selection-start-line="666" selection-end-line="666" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="479" column="31" lean-forward="true" selection-start-line="479" selection-start-column="31" selection-end-line="479" selection-end-column="31" />
-              <folding>
-                <element signature="e#20338#20339#0" expanded="true" />
-                <element signature="e#20376#20377#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/UserBlackListMaintained.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/userTestBlacklist.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="129">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -174,6 +128,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -189,17 +144,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/ThreeDamned.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/userTestBlacklist.json" />
         <option value="$PROJECT_DIR$/src/main/resources/passesCase.json" />
         <option value="$PROJECT_DIR$/src/main/resources/rejectedCase.json" />
         <option value="$PROJECT_DIR$/src/test/WrongHashesNotBlocked.java" />
-        <option value="$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java" />
         <option value="$PROJECT_DIR$/src/test/UserBlackListMaintained.java" />
         <option value="$PROJECT_DIR$/src/main/resources/temp.json" />
         <option value="$PROJECT_DIR$/src/main/resources/hashTestBlacklist.json" />
         <option value="$PROJECT_DIR$/src/main/resources/testInfo.md" />
+        <option value="$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/ThreeDamnedContract.java" />
         <option value="$PROJECT_DIR$/src/main/java/ThreeDamned.java" />
+        <option value="$PROJECT_DIR$/src/main/java/markd315/ThreeDamnedContract.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" />
+        <option value="$PROJECT_DIR$/src/main/java/markd315/ThreeDamned.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" />
       </list>
     </option>
   </component>
@@ -261,13 +223,36 @@
               <item name="3Damned" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="markd315" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
               <item name="3Damned" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="markd315" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -279,14 +264,23 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashSet.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533356578482" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533357647206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\markd\eclipse\Workspace2\3Damned\src\main\resources\test" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="markd315" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\markd\eclipse\Workspace2\3Damned\src\main\resources" />
     </key>
@@ -305,7 +299,7 @@
   </component>
   <component name="RunManager" selected="JUnit.Suite">
     <configuration name="App" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="main.java.ThreeDamned" />
+      <option name="MAIN_CLASS_NAME" value="markd315.ThreeDamned" />
       <module name="3323493298439213429842353421453" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -324,8 +318,8 @@
     </configuration>
     <configuration name="UserBlackListMaintained.userRejectedAfterViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="3323493298439213429842353421453" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserBlackListMaintained" />
+      <option name="PACKAGE_NAME" value="markd315" />
+      <option name="MAIN_CLASS_NAME" value="markd315.UserBlackListMaintained" />
       <option name="METHOD_NAME" value="userRejectedAfterViolation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -352,20 +346,11 @@
       <updated>1533344433392</updated>
       <workItem from="1533344436385" duration="1178000" />
       <workItem from="1533345655284" duration="129000" />
-      <workItem from="1533345813652" duration="4749000" />
+      <workItem from="1533345813652" duration="5812000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Suite - 2018.08.04 at 00h 10m 03s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Suite - 2018.08.04 at 00h 10m 47s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Suite - 2018.08.04 at 00h 13m 10s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Suite - 2018.08.04 at 00h 17m 01s.xml">
       <configuration name="Suite" configurationId="JUnit" />
     </history-entry>
@@ -387,15 +372,24 @@
     <history-entry file="Suite - 2018.08.04 at 00h 22m 46s.xml">
       <configuration name="Suite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Suite - 2018.08.04 at 00h 23m 11s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Suite - 2018.08.04 at 00h 29m 17s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Suite - 2018.08.04 at 00h 38m 00s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6056000" />
+    <option name="totallyTimeSpent" value="7119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="0" width="1286" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25285482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25285482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -404,7 +398,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46279493" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4754991" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39927405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,7 +408,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32849365" />
-      <window_info active="true" anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32952693" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -433,34 +427,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="45" selection-start-line="6" selection-start-column="17" selection-end-line="10" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/nio/charset/Charset.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="466" column="36" lean-forward="true" selection-start-line="466" selection-start-column="36" selection-end-line="466" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/HashesMatchedAreBlocked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/WrongHashesNotBlocked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -472,13 +442,6 @@
             <element signature="e#38251#38252#0" expanded="true" />
             <element signature="e#38309#38310#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="666" selection-start-line="666" selection-end-line="666" />
         </state>
       </provider>
     </entry>
@@ -494,6 +457,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/userTestBlacklist_bk.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/temp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/hashTestBlacklist.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/userTestBlacklist.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -505,79 +496,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/userTestBlacklist.json">
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="666" selection-start-line="666" selection-end-line="667" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/rejectedCase.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+          <caret column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/userTestBlacklist_bk.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/passesCase.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/UserBlackListMaintained.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rejectedCase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/passesCase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/temp.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hashTestBlacklist_bk.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/hashTestBlacklist_bk.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="45" selection-start-column="44" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hashTestBlacklist.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/testInfo.md">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/testInfo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
-            <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+            <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ThreeDamned.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/ThreeDamnedContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/ThreeDamned.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

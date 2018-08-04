@@ -1,4 +1,4 @@
-package main.java;
+package markd315;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,34 +9,18 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
-import java.util.List;
 import java.util.Set;
-
 import javax.xml.bind.DatatypeConverter;
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class ThreeDamned {
+public class ThreeDamned{
 
 	private static Set<String> hashBlacklist;
 	private static Set<String> userBlacklist;
+	private static boolean isLoaded = false;
 
-	private static boolean isLoaded = false; 
-	
-	public static String toSHA1(byte[] toConvert) throws UnsupportedEncodingException {
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("SHA-1");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        byte[] hashed = md.digest(toConvert);
-        return new String(DatatypeConverter.printBase64Binary(hashed));
-    }
-
-	public static boolean notOnBlacklist(String stl) throws IOException {
+    public static boolean notOnBlacklist(String stl) throws IOException {
         loadListsIfNot();
         String contents = readFile(stl, Charset.defaultCharset());
         String sha1 = toSHA1(contents.getBytes());
@@ -61,16 +45,28 @@ public class ThreeDamned {
             return false;
         }
         return true;
-	}
+    }
     public static void addToBlacklist(String stl) throws IOException {
         loadListsIfNot();
         String contents = readFile(stl, Charset.defaultCharset());
         String sha1 = toSHA1(contents.getBytes());
-	    hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
+        hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File("src/main/resources/hashTestBlacklist.json"), userBlacklist);
     }
-	
+
+
+	private static String toSHA1(byte[] toConvert) throws UnsupportedEncodingException {
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA-1");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        byte[] hashed = md.digest(toConvert);
+        return new String(DatatypeConverter.printBase64Binary(hashed));
+    }
+
 	private static void loadListsIfNot(){
 		if(isLoaded) {
 			return;
@@ -99,5 +95,4 @@ public class ThreeDamned {
 			  byte[] encoded = Files.readAllBytes(Paths.get(path));
 			  return new String(encoded, encoding);
 			}
-	
 }

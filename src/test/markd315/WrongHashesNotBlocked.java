@@ -1,7 +1,6 @@
-package test;
+package markd315;
 
-import static org.junit.Assert.*;
-
+import markd315.ThreeDamned;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,8 +15,8 @@ public class WrongHashesNotBlocked {
 
 	@Test
 	public void test() throws IOException {
-        String testCase = "src/main/resources/passesCase.json"; //One byte, ASCII 56.
-        Assert.assertTrue(main.java.ThreeDamned.notOnBlacklist(testCase));
+        String testCase = "src/main/resources/test/passesCase.json"; //One byte, ASCII 56.
+        Assert.assertTrue(ThreeDamned.notOnBlacklist(testCase));
 	}
 
 }
