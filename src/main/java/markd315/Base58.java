@@ -2,6 +2,7 @@ package markd315;
 
 public class Base58 {
 
+    //Used from: https://gist.github.com/vrotaru/1753908
     private static final char[] ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
             .toCharArray();
     private static final int BASE_58 = ALPHABET.length;

@@ -34,11 +34,6 @@ I'm still going to prototype it soon, probably this weekend.</description>
   			<artifactId>jackson-databind</artifactId>
  			<version>2.9.4</version>
 		</dependency>
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.1</version>
-		</dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
