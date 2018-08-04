@@ -1,0 +1,265 @@
+swagger: '2.0'
+info:
+  description: This is a lightweight server for filtering out (some) types of bad actors in a 3D print shop.
+  version: 1.0.0
+  title: 3Damned
+  termsOfService: Apache 2.0 license
+  contact:
+    email: markd315@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+tags:
+- name: hash
+  description: Blasklist for specific banned designs
+  externalDocs:
+    description: Find out more
+    url: http://swagger.io
+- name: user
+  description: Blacklisted identification for previous users of this printshop
+paths:
+  /blacklist/add:
+    post:
+      tags:
+      - hash
+      summary: Add a new banned design
+      operationId: addHash
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: body
+        name: body
+        description: Banned design to add
+        required: true
+        schema:
+          $ref: '#/definitions/Hash'
+      responses:
+        201:
+          description: Added to list
+          schema:
+            $ref: '#/definitions/Hash'
+        400:
+          description: Bad request
+      security:
+      - threeD_auth:
+        - write:threeD
+        - read:threeD
+  /blacklist/file/add:
+    post:
+      tags:
+      - hash
+      summary: Add a new banned design (entire file hashed by server)
+      operationId: addFile
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: body
+        name: body
+        description: Banned design to add
+        required: true
+        schema:
+          $ref: '#/definitions/File'
+      responses:
+        201:
+          description: Added to list
+          schema:
+            $ref: '#/definitions/Hash'
+        400:
+          description: Bad request
+      security:
+      - threeD_auth:
+        - write:threeD
+        - read:threeD
+  /blacklist/file/query:
+    post:
+      tags:
+      - hash
+      summary: Test if a design is banned
+      operationId: fileNotOnBlacklist
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: body
+        name: hash
+        description: Unsure design to test
+        required: true
+        schema:
+          $ref: '#/definitions/File'
+      - in: header
+        name: user
+        description: Optional, the user responsible for requesting the design (could be banned if design is blasklisted)
+        required: false
+        type: string
+      responses:
+        200:
+          description: Blacklist decision in body
+          schema:
+            $ref: '#/definitions/QueryResponse'
+        400:
+          description: Bad request
+      security:
+      - threeD_auth:
+        - read:threeD
+
+  /blacklist/{hash}:
+    get:
+      tags:
+      - hash
+      summary: Test if a design is banned
+      operationId: notOnBlacklist
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: path
+        name: hash
+        description: Unsure design to test
+        required: true
+        type: string
+      - in: header
+        name: user
+        description: Optional, the user responsible for requesting the design (could be banned if design is blasklisted)
+        required: false
+        type: string
+      responses:
+        200:
+          description: Blacklist decision in body
+          schema:
+            $ref: '#/definitions/QueryResponse'
+      security:
+      - threeD_auth:
+        - read:threeD
+  /user/{name}:
+    get:
+      tags:
+      - user
+      summary: Test if a user is banned
+      operationId: isBanned
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: path
+        name: name
+        description: Query if user is banned
+        required: true
+        type: string
+      responses:
+        200:
+          description: Blacklist decision in body
+          schema:
+            $ref: '#/definitions/QueryResponse'
+        403:
+          description: Blackisted user flagged for follow-up
+      security:
+      - threeD_auth:
+        - read:threeD
+    delete:
+      tags:
+      - user
+      summary: Unban a user
+      operationId: unban
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: path
+        name: name
+        description: Unban this user
+        required: true
+        type: string
+      responses:
+        204:
+          description: User unbanned
+        404:
+          description: User was never banned
+        400:
+          description: Bad request
+      security:
+      - threeD_auth:
+        - write:threeD
+        - read:threeD
+    post:
+      tags:
+      - hash
+      summary: Manually ban a user
+      operationId: banUser
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - in: path
+        name: name
+        description: Banned user to add
+        required: true
+        type: string
+      responses:
+        201:
+          description: User banned
+        400:
+          description: Bad request
+      security:
+      - threeD_auth:
+        - write:threeD
+        - read:threeD
+
+securityDefinitions:
+  threeD_auth:
+    type: oauth2
+    authorizationUrl: http://petstore.swagger.io/oauth/dialog
+    flow: implicit
+    scopes:
+      write:threeD: modify blacklists for users and designs
+      read:threeD: query against blacklist
+definitions:
+  File:
+    type: object
+    required:
+    - contents
+    properties:
+      contents:
+        type: string
+  Hash:
+    type: object
+    required:
+    - digest
+    properties:
+      digest:
+        type: string
+  QueryResponse:
+    type: object
+    properties:
+      notFlaggedForConcern:
+        type: boolean
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+host: virtserver.swaggerhub.com
+basePath: /
+schemes:
+- https
+- http
