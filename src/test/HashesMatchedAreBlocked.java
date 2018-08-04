@@ -6,6 +6,8 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class HashesMatchedAreBlocked {
 
 	@AfterClass
@@ -13,11 +15,9 @@ public class HashesMatchedAreBlocked {
 	}
 
 	@Test
-	public void test() {
-	    byte[] testcase = new byte[1];
-	    testcase[0] = 12;
-	    Assert.assertFalse(main.java.ThreeDamned.notOnBlacklist(testcase.));
-
+	public void test() throws IOException {
+	    String testCase = "src/main/resources/rejectedCase.json"; //One byte, ASCII 56.
+	    Assert.assertFalse(main.java.ThreeDamned.notOnBlacklist(testCase));
 	}
 
 }

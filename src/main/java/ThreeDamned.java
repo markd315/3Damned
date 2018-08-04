@@ -37,22 +37,22 @@ public class ThreeDamned {
     }
 
 	public static boolean notOnBlacklist(String stl) throws IOException {
-		if(!isLoaded) {
-			loadList();
-		}
-		String contents = readFile(stl, Charset.defaultCharset());
-		String sha1 = toSHA1(contents.getBytes());
-		if(hashBlacklist.contains(sha1)) {
+        if(!isLoaded) {
+            loadLists();
+        }
+        String contents = readFile(stl, Charset.defaultCharset());
+        String sha1 = toSHA1(contents.getBytes());
+        if(hashBlacklist.contains(sha1)) {
             return false;
-		}
-		return true;
-	}
+        }
+        return true;
+    }
 
     public static boolean notOnBlacklist(String stl, String username) throws IOException {
         if(!isLoaded) {
-            loadList();
+            loadLists();
         }
-        String contents = readFile(stl, Charset.defaultCharset());
+        String contents = readFile(stl, StandardCharsets.US_ASCII);
         String sha1 = toSHA1(contents.getBytes());
         if(userBlacklist.contains(username)){
             return false;
@@ -65,20 +65,31 @@ public class ThreeDamned {
         }
         return true;
 	}
+
+    public static void addToBlacklist(String stl) throws IOException {
+        if(!isLoaded) {
+            loadLists();
+        }
+        String contents = readFile(stl, Charset.defaultCharset());
+        String sha1 = toSHA1(contents.getBytes());
+	    hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new File("src/main/resources/hashTestBlacklist.json"), userBlacklist);
+    }
 	
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		loadList();
+		loadLists();
 		byte[] bytee = new byte[1];
 		bytee[0] = 56;
 		System.out.println(toSHA1(bytee));
 	}
 	
 	
-	private static void loadList(){
+	private static void loadLists(){
 		if(isLoaded) {
 			return;
 		}
-		//Loading blacklist into memory
+		//Loading blacklists into memory
 		ObjectMapper mapper = new ObjectMapper();
 		String json;
 		try {
@@ -87,6 +98,12 @@ public class ThreeDamned {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+        try {
+            json = readFile("src/main/resources/userTestBlacklist.json", Charset.defaultCharset());
+            userBlacklist = mapper.readValue(json, new TypeReference<Set<String>>(){});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		isLoaded = true;
 	}
 	
