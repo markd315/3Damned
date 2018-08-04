@@ -1,3 +1,4 @@
+package main.java;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,21 +21,20 @@ public class ThreeDamned {
 
 	private static List<String> hashBlacklist;
 	private static List<String> userBlacklist;
-	
+
 	private static boolean isLoaded = false; 
 	
 	public static String toSHA1(byte[] toConvert) throws UnsupportedEncodingException {
-	    MessageDigest md = null;
-	    try {
-	        md = MessageDigest.getInstance("SHA-1");
-	    }
-	    catch(NoSuchAlgorithmException e) {
-	        e.printStackTrace();
-	    }
-	    byte[] hashed = md.digest(toConvert);
-	    return new String(DatatypeConverter.printBase64Binary(hashed));
-	}
-	
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA-1");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        byte[] hashed = md.digest(toConvert);
+        return new String(DatatypeConverter.printBase64Binary(hashed));
+    }
+
 	public boolean compareAgainstBlacklist(File stl) {
 		if(!isLoaded) {
 			loadList();
