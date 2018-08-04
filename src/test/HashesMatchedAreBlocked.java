@@ -19,5 +19,4 @@ public class HashesMatchedAreBlocked {
 	    String testCase = "src/main/resources/rejectedCase.json"; //One byte, ASCII 56.
 	    Assert.assertFalse(main.java.ThreeDamned.notOnBlacklist(testCase));
 	}
-
 }

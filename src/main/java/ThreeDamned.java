@@ -37,9 +37,7 @@ public class ThreeDamned {
     }
 
 	public static boolean notOnBlacklist(String stl) throws IOException {
-        if(!isLoaded) {
-            loadLists();
-        }
+        loadListsIfNot();
         String contents = readFile(stl, Charset.defaultCharset());
         String sha1 = toSHA1(contents.getBytes());
         if(hashBlacklist.contains(sha1)) {
@@ -49,9 +47,7 @@ public class ThreeDamned {
     }
 
     public static boolean notOnBlacklist(String stl, String username) throws IOException {
-        if(!isLoaded) {
-            loadLists();
-        }
+        loadListsIfNot();
         String contents = readFile(stl, StandardCharsets.US_ASCII);
         String sha1 = toSHA1(contents.getBytes());
         if(userBlacklist.contains(username)){
@@ -62,14 +58,12 @@ public class ThreeDamned {
             userBlacklist.add(username);//Ban the user from generating documents in the future.
             ObjectMapper mapper = new ObjectMapper();
             mapper.writeValue(new File("src/main/resources/userTestBlacklist.json"), userBlacklist);
+            return false;
         }
         return true;
 	}
-
     public static void addToBlacklist(String stl) throws IOException {
-        if(!isLoaded) {
-            loadLists();
-        }
+        loadListsIfNot();
         String contents = readFile(stl, Charset.defaultCharset());
         String sha1 = toSHA1(contents.getBytes());
 	    hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
@@ -77,15 +71,7 @@ public class ThreeDamned {
         mapper.writeValue(new File("src/main/resources/hashTestBlacklist.json"), userBlacklist);
     }
 	
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		loadLists();
-		byte[] bytee = new byte[1];
-		bytee[0] = 56;
-		System.out.println(toSHA1(bytee));
-	}
-	
-	
-	private static void loadLists(){
+	private static void loadListsIfNot(){
 		if(isLoaded) {
 			return;
 		}
