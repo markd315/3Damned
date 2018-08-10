@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ec434a-4bce-4ecd-a27a-16f0d52ecd9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +32,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="47" />
+          <entry key="java" value="48" />
           <entry key="json" value="23" />
           <entry key="md" value="6" />
           <entry key="properties" value="1" />
@@ -45,7 +44,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="47" />
+          <entry key="JAVA" value="48" />
           <entry key="JSON" value="20" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -57,7 +56,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="3446" />
+          <entry key="java" value="3528" />
           <entry key="json" value="86" />
           <entry key="md" value="288" />
           <entry key="xml" value="13" />
@@ -65,7 +64,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3446" />
+          <entry key="JAVA" value="3528" />
           <entry key="JSON" value="83" />
           <entry key="Markdown" value="288" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -76,7 +75,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -84,6 +83,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -106,13 +114,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+            <state relative-caret-position="222">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,11 +183,11 @@
         <option value="$PROJECT_DIR$/src/main/java/io/swagger/api/BlacklistApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/markd315/swagger/Base58.java" />
         <option value="$PROJECT_DIR$/src/main/java/markd315/io/Base58.java" />
-        <option value="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" />
-        <option value="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" />
+        <option value="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" />
       </list>
     </option>
   </component>
@@ -274,7 +284,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashSet.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533941313773" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533941482214" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -367,14 +377,11 @@
       <workItem from="1533344436385" duration="1178000" />
       <workItem from="1533345655284" duration="129000" />
       <workItem from="1533345813652" duration="6707000" />
-      <workItem from="1533419008512" duration="9012000" />
+      <workItem from="1533419008512" duration="9178000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Suite - 2018.08.04 at 00h 22m 46s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Suite - 2018.08.04 at 00h 23m 11s.xml">
       <configuration name="Suite" configurationId="JUnit" />
     </history-entry>
@@ -402,9 +409,12 @@
     <history-entry file="Suite - 2018.08.10 at 18h 48m 02s.xml">
       <configuration name="Suite" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Suite - 2018.08.10 at 18h 48m 37s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17026000" />
+    <option name="totallyTimeSpent" value="17192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="0" width="1286" height="687" extended-state="0" />
@@ -684,16 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/model/QueryResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -705,17 +705,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        <state relative-caret-position="102">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,12 +722,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="119">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
           </folding>
         </state>
       </provider>

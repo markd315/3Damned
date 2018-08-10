@@ -10,6 +10,5 @@ public class BaseTestBuilder {
     @Before
     public void setup(){
         hashController = new BlacklistApiController();
-        hashController.setUserController(new UserApiController());
     }
 }

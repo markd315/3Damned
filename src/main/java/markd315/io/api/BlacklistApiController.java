@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.validation.Valid;
@@ -33,6 +34,12 @@ public class BlacklistApiController implements BlacklistApi {
     public static String hashPath;
     public static final String hashTestPath = "src/main/resources/test/hashTestBlacklist.json";
     public static final String hashProdPath = "src/main/resources/hashBlacklist.json";
+
+    public BlacklistApiController(){
+        hashBlacklist = new HashSet<String>();
+        userController = new UserApiController();
+        userController.setUserBlacklist(new HashSet<String>());
+    }
 
     public ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody java.io.File body) throws IOException {
         String contents = Boot.readFile(body.getPath(), Charset.defaultCharset());
