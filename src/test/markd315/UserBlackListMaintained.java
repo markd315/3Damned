@@ -15,7 +15,7 @@ import java.nio.file.StandardCopyOption;
 
 public class UserBlackListMaintained extends BaseTestBuilder {
     @After
-    public static void tearDownAfterClass() throws Exception {
+    public void tearDownAfterClass() throws Exception {
         //Undo any bans in test
         Path from = Paths.get("src/main/resources/test/userTestBlacklist_bk.json"); //convert from File to Path
         Path to = Paths.get("src/main/resources/test/userTestBlacklist.json"); //convert from String to Path
@@ -28,31 +28,31 @@ public class UserBlackListMaintained extends BaseTestBuilder {
 
     @Test
     public void rejectedDueToUser() throws IOException {
-        String testFile = "src/main/resources/test/passesCase.json"; //One byte, ASCII 53.
-        Assert.assertFalse(hashController.notOnBlacklist(testFile, "marvinsroom"));
+        File testFile = new File("src/main/resources/test/passesCase.json"); //One byte, ASCII 53.
+        Assert.assertFalse(hashController.fileNotOnBlacklist(testFile, "marvinsroom").getBody().notBlocked());
     }
 
     @Test
     public void userRejectedAfterViolation() throws IOException {
         //Try before getting the user banned
-        String testFile = "src/main/resources/test/passesCase.json"; //One byte, ASCII 56.
-        Assert.assertTrue(hashController.notOnBlacklist(testFile, "getbummedout"));
+        File testFile = new File("src/main/resources/test/passesCase.json"); //One byte, ASCII 56.
+        Assert.assertTrue(hashController.fileNotOnBlacklist(testFile, "getbummedout").getBody().notBlocked());
         //Get the user banned
-        testFile = "src/main/resources/test/rejectedCase.json"; //One byte, ASCII 56.
-        Assert.assertFalse(hashController.notOnBlacklist(testFile, "getbummedout"));
+        testFile = new File("src/main/resources/test/rejectedCase.json"); //One byte, ASCII 56.
+        Assert.assertFalse(hashController.fileNotOnBlacklist(testFile, "getbummedout").getBody().notBlocked());
         //Try with the ban in place
-        testFile = "src/main/resources/test/passesCase.json"; //One byte, ASCII 53.
-        Assert.assertFalse(hashController.notOnBlacklist(testFile, "getbummedout"));
+        testFile = new File("src/main/resources/test/passesCase.json"); //One byte, ASCII 53.
+        Assert.assertFalse(hashController.fileNotOnBlacklist(testFile, "getbummedout").getBody().notBlocked());
     }
 
     @Test
     public void canAddToBlacklist() throws IOException {
         //Try before getting the user banned
-        String testFile = "src/main/resources/test/passesCase.json"; //One byte, ASCII 56.
-        Assert.assertTrue(hashController.notOnBlacklist(testFile, "ministryofalienation"));
+        File testFile = new File("src/main/resources/test/passesCase.json"); //One byte, ASCII 56.
+        Assert.assertTrue(hashController.fileNotOnBlacklist(testFile, "ministryofalienation").getBody().notBlocked());
         //Manually ban the passesCase file.
         hashController.addFile(new File("src/main/resources/test/passesCase.json"));
         //Try with the ban in place
-        Assert.assertFalse(hashController.notOnBlacklist(testFile, "ministryofalienation"));
+        Assert.assertFalse(hashController.fileNotOnBlacklist(testFile, "ministryofalienation").getBody().notBlocked());
     }
 }
