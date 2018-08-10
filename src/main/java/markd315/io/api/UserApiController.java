@@ -1,7 +1,7 @@
-package io.swagger.api;
+package markd315.io.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.model.QueryResponse;
+import markd315.io.model.QueryResponse;
 
 import io.swagger.annotations.*;
 
@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-08-04T19:33:03.042-04:00")
+@javax.annotation.Generated(value = "io.io.codegen.languages.SpringCodegen", date = "2018-08-04T19:33:03.042-04:00")
 
 @Controller
 public class UserApiController implements UserApi {

@@ -1,13 +1,13 @@
-package io.swagger.api;
+package markd315.io.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.Boot;
-import io.swagger.model.Hash;
-import io.swagger.model.QueryResponse;
+import markd315.io.Boot;
+import markd315.io.model.Hash;
+import markd315.io.model.QueryResponse;
 
 import io.swagger.annotations.*;
 
-import io.swagger.Base58;
+import markd315.io.Base58;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Set;
 
 import javax.validation.Valid;
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-08-04T19:33:03.042-04:00")
+@javax.annotation.Generated(value = "io.io.codegen.languages.SpringCodegen", date = "2018-08-04T19:33:03.042-04:00")
 
 @Controller
 public class BlacklistApiController implements BlacklistApi {
@@ -52,7 +52,7 @@ public class BlacklistApiController implements BlacklistApi {
     }
 
     public ResponseEntity<QueryResponse> fileNotOnBlacklist(@ApiParam(value = "Unsure design to test" ,required=true )  @Valid @RequestBody java.io.File file,
-        @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)" ) @RequestHeader(value="user", required=false) String user) throws IOException {
+                                                            @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)" ) @RequestHeader(value="user", required=false) String user) throws IOException {
         // do some magic!
         String contents = Boot.readFile(file.getPath(), Charset.defaultCharset());
         String hash = toSHA1(contents.getBytes());

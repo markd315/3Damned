@@ -1,10 +1,9 @@
-package io.swagger;
+package markd315.io;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.swagger.api.BlacklistApiController;
-import io.swagger.api.UserApi;
-import io.swagger.api.UserApiController;
+import markd315.io.api.BlacklistApiController;
+import markd315.io.api.UserApiController;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
@@ -18,13 +17,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Set;
-
-import static io.swagger.api.BlacklistApiController.hashPath;
-import static io.swagger.api.BlacklistApiController.hashProdPath;
-import static io.swagger.api.BlacklistApiController.hashTestPath;
-import static io.swagger.api.UserApiController.userPath;
-import static io.swagger.api.UserApiController.userProdPath;
-import static io.swagger.api.UserApiController.userTestPath;
 
 @SpringBootApplication
 @EnableSwagger2
@@ -45,24 +37,24 @@ public class Boot implements CommandLineRunner {
 
     public void loadLists(){
         if(testMode){
-            hashPath = hashTestPath;
-            userPath = userTestPath;
+            BlacklistApiController.hashPath = BlacklistApiController.hashTestPath;
+            UserApiController.userPath = UserApiController.userTestPath;
         }else{
-            hashPath = hashProdPath;
-            userPath = userProdPath;
+            BlacklistApiController.hashPath = BlacklistApiController.hashProdPath;
+            UserApiController.userPath = UserApiController.userProdPath;
         }
 
         //Loading blacklists into memory
         ObjectMapper mapper = new ObjectMapper();
         String json;
         try {
-            json = readFile(hashPath, Charset.defaultCharset());
+            json = readFile(BlacklistApiController.hashPath, Charset.defaultCharset());
             hashController.setHashBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            json = readFile(userPath, Charset.defaultCharset());
+            json = readFile(UserApiController.userPath, Charset.defaultCharset());
             hashController.getUserController().setUserBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
         } catch (IOException e) {
             e.printStackTrace();

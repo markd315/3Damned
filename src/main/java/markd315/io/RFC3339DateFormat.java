@@ -1,4 +1,4 @@
-package io.swagger;
+package markd315.io;
 
 import com.fasterxml.jackson.databind.util.ISO8601DateFormat;
 import com.fasterxml.jackson.databind.util.ISO8601Utils;
