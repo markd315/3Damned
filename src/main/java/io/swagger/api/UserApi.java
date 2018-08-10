@@ -57,7 +57,7 @@ public interface UserApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.GET)
-    ResponseEntity<QueryResponse> isBanned(@ApiParam(value = "Query if user is banned", required = true) @PathVariable("name") String name);
+    ResponseEntity<QueryResponse> isNotBanned(@ApiParam(value = "Query if user is banned", required = true) @PathVariable("name") String name);
 
 
     @ApiOperation(value = "Unban a user", notes = "", response = Void.class, authorizations = {

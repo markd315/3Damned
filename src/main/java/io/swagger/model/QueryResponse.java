@@ -14,27 +14,27 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-08-04T19:33:03.042-04:00")
 
 public class QueryResponse   {
-  @JsonProperty("notFlaggedForConcern")
-  private Boolean notFlaggedForConcern = null;
+  @JsonProperty("notBlocked")
+  private Boolean notBlocked = null;
 
-  public QueryResponse notFlaggedForConcern(Boolean notFlaggedForConcern) {
-    this.notFlaggedForConcern = notFlaggedForConcern;
+  public QueryResponse notBlocked(Boolean notBlocked) {
+    this.notBlocked = notBlocked;
     return this;
   }
 
    /**
-   * Get notFlaggedForConcern
-   * @return notFlaggedForConcern
+   * Get notBlocked
+   * @return notBlocked
   **/
   @ApiModelProperty(value = "")
 
 
-  public Boolean getNotFlaggedForConcern() {
-    return notFlaggedForConcern;
+  public Boolean notBlocked() {
+    return notBlocked;
   }
 
-  public void setNotFlaggedForConcern(Boolean notFlaggedForConcern) {
-    this.notFlaggedForConcern = notFlaggedForConcern;
+  public void setNotBlocked(Boolean notBlocked) {
+    this.notBlocked = notBlocked;
   }
 
 
@@ -47,12 +47,12 @@ public class QueryResponse   {
       return false;
     }
     QueryResponse queryResponse = (QueryResponse) o;
-    return Objects.equals(this.notFlaggedForConcern, queryResponse.notFlaggedForConcern);
+    return Objects.equals(this.notBlocked, queryResponse.notBlocked);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(notFlaggedForConcern);
+    return Objects.hash(notBlocked);
   }
 
   @Override
@@ -60,7 +60,7 @@ public class QueryResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class QueryResponse {\n");
     
-    sb.append("    notFlaggedForConcern: ").append(toIndentedString(notFlaggedForConcern)).append("\n");
+    sb.append("    notBlocked: ").append(toIndentedString(notBlocked)).append("\n");
     sb.append("}");
     return sb.toString();
   }

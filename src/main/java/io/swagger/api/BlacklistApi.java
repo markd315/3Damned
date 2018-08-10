@@ -59,7 +59,7 @@ public interface BlacklistApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.POST)
-    ResponseEntity<Hash> addHash(@ApiParam(value = "Banned design to add", required = true) @Valid @RequestBody Hash body);
+    ResponseEntity<Hash> addHash(@ApiParam(value = "Banned design to add", required = true) @Valid @RequestBody Hash body) throws IOException;
 
 
     @ApiOperation(value = "Test if a design is banned", notes = "", response = QueryResponse.class, authorizations = {
@@ -75,7 +75,7 @@ public interface BlacklistApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.POST)
-    ResponseEntity<QueryResponse> fileNotOnBlacklist(@ApiParam(value = "Unsure design to test", required = true) @Valid @RequestBody java.io.File hash, @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)") @RequestHeader(value = "user", required = false) String user);
+    ResponseEntity<QueryResponse> fileNotOnBlacklist(@ApiParam(value = "Unsure design to test", required = true) @Valid @RequestBody java.io.File hash, @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)") @RequestHeader(value = "user", required = false) String user) throws IOException;
 
 
     @ApiOperation(value = "Test if a design is banned", notes = "", response = QueryResponse.class, authorizations = {

@@ -1,4 +1,4 @@
-package markd315;
+package io.swagger;
 
 public class Base58 {
 
