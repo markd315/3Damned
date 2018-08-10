@@ -36,22 +36,38 @@ public class ThreeDamned{
         return true;
     }
 
+    public static void banUser(String username) throws IOException {
+        userBlacklist.add(username);//Ban the user from generating documents in the future.
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new File(userPath), userBlacklist);
+    }
+    public static void unbanUser(String username) throws IOException {
+        userBlacklist.remove(username);//Ban the user from generating documents in the future.
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new File(userPath), userBlacklist);
+    }
+
+
     public static boolean notOnBlacklist(String stl, String username) throws IOException {
         loadListsIfNot();
         String contents = readFile(stl, StandardCharsets.US_ASCII);
         String sha1 = toSHA1(contents.getBytes());
-        if(userBlacklist.contains(username)){
+        if(userBanned(username)){
+            banUser(username);
             return false;
         }
 
         if (hashBlacklist.contains(sha1)) {
-            userBlacklist.add(username);//Ban the user from generating documents in the future.
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(new File(userPath), userBlacklist);
+
             return false;
         }
         return true;
     }
+
+    public static boolean userBanned(String username) {
+        return userBlacklist.contains(username);
+    }
+
     public static void addToBlacklist(String stl) throws IOException {
         loadListsIfNot();
         String contents = readFile(stl, Charset.defaultCharset());
@@ -61,6 +77,9 @@ public class ThreeDamned{
         mapper.writeValue(new File(hashPath), userBlacklist);
     }
 
+    public static void addToBlacklist(File stl) throws IOException {
+        addToBlacklist(readFile(stl.getPath(), Charset.defaultCharset()));
+    }
 
 	private static String toSHA1(byte[] toConvert){
         MessageDigest md = null;

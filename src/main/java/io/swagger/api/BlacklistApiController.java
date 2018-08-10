@@ -5,6 +5,7 @@ import io.swagger.model.QueryResponse;
 
 import io.swagger.annotations.*;
 
+import markd315.ThreeDamned;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.validation.constraints.*;
@@ -24,10 +26,8 @@ import javax.validation.Valid;
 @Controller
 public class BlacklistApiController implements BlacklistApi {
 
-
-
-    public ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody java.io.File body) {
-        // do some magic!
+    public ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody java.io.File body) throws IOException {
+        ThreeDamned.addToBlacklist(body);
         return new ResponseEntity<Hash>(HttpStatus.OK);
     }
 

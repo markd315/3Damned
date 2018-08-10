@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -41,7 +42,7 @@ public interface BlacklistApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.POST)
-    ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add", required = true) @Valid @RequestBody java.io.File body);
+    ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add", required = true) @Valid @RequestBody java.io.File body) throws IOException;
 
 
     @ApiOperation(value = "Add a new banned design", notes = "", response = Hash.class, authorizations = {

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -40,7 +41,7 @@ public interface UserApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.POST)
-    ResponseEntity<Void> banUser(@ApiParam(value = "Banned user to add", required = true) @PathVariable("name") String name);
+    ResponseEntity<Void> banUser(@ApiParam(value = "Banned user to add", required = true) @PathVariable("name") String name) throws IOException;
 
 
     @ApiOperation(value = "Test if a user is banned", notes = "", response = QueryResponse.class, authorizations = {
@@ -74,6 +75,6 @@ public interface UserApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.DELETE)
-    ResponseEntity<Void> unban(@ApiParam(value = "Unban this user", required = true) @PathVariable("name") String name);
+    ResponseEntity<Void> unban(@ApiParam(value = "Unban this user", required = true) @PathVariable("name") String name) throws IOException;
 
 }
