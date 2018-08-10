@@ -89,4 +89,8 @@ public class BlacklistApiController implements BlacklistApi {
     public UserApiController getUserController() {
         return this.userController;
     }
+
+    public void setUserController(UserApiController user){
+        this.userController = user;
+    }
 }

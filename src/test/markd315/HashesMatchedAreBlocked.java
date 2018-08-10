@@ -1,20 +1,21 @@
 package markd315;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
 
-public class HashesMatchedAreBlocked {
+public class HashesMatchedAreBlocked extends BaseTestBuilder{
 
-	@AfterClass
+	@After
 	public static void tearDownAfterClass() throws Exception {
 	}
 
 	@Test
 	public void test() throws IOException {
 	    String testCase = "src/main/resources/test/rejectedCase.json"; //One byte, ASCII 56.
-	    Assert.assertFalse(ThreeDamned.notOnBlacklist(testCase));
+	    Assert.assertFalse(hashController.notOnBlacklist(testCase));
 	}
 }
