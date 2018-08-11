@@ -10,13 +10,12 @@ import java.io.IOException;
 
 public class HashesMatchedAreBlocked extends BaseTestBuilder{
 
-	@After
-	public void tearDownAfterClass() throws Exception {
-	}
-
 	@Test
 	public void test() throws IOException {
 	    File testCase = new File("src/main/resources/test/rejectedCase.json"); //One byte, ASCII 56.
 	    Assert.assertFalse(hashController.fileNotOnBlacklist(testCase, null).getBody().notBlocked());
+	    testCase = new File("src/main/resources/test/rejectedCase.json");
+	    hashController.addFile(testCase);
+	    Assert.assertTrue(hashController.fileNotOnBlacklist(testCase, null).getBody().notBlocked());
 	}
 }

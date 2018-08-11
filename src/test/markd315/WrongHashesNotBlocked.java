@@ -7,10 +7,6 @@ import java.io.IOException;
 
 public class WrongHashesNotBlocked extends BaseTestBuilder{
 
-	@After
-	public void tearDownAfterClass() throws Exception {
-	}
-
 	@Test
 	public void test() throws IOException {
         File testCase = new File("src/main/resources/test/passesCase.json"); //One byte, ASCII 56.

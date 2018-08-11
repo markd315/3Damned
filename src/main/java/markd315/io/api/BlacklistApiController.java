@@ -48,10 +48,7 @@ public class BlacklistApiController implements BlacklistApi {
     public ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody java.io.File body) throws IOException {
         String contents = Boot.readFile(body.getPath(), Charset.defaultCharset());
             String sha1 = toSHA1(contents.getBytes());
-            hashBlacklist.add(sha1);//Ban the user from generating documents in the future.
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(new File(hashPath), userController.getUserBlacklist());
-        return new ResponseEntity<Hash>(new Hash().digest(sha1), HttpStatus.OK);
+        return addHash(new Hash().digest(sha1));
     }
 
     public ResponseEntity<Hash> addHash(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody Hash body) throws IOException {
