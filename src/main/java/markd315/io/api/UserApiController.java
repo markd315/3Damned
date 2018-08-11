@@ -38,7 +38,7 @@ public class UserApiController implements UserApi {
     }
 
     public ResponseEntity<Void> unban(@ApiParam(value = "Unban this user",required=true ) @PathVariable("name") String name) throws IOException {
-        if(!isNotBanned(name).getBody().notBlocked()){
+        if(isNotBanned(name).getBody().notBlocked()){
             return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
         }
         userBlacklist.remove(name);//Ban the user from generating documents in the future.

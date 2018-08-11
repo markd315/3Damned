@@ -45,4 +45,11 @@ public class UserBlackListMaintained extends BaseTestBuilder {
         //Try with the ban in place
         Assert.assertFalse(hashController.fileNotOnBlacklist(testFile, "ministryofalienation").getBody().notBlocked());
     }
+
+    @Test
+    public void canUnban() throws IOException {
+        Assert.assertFalse(hashController.getUserController().isNotBanned("marvinsroom").getBody().notBlocked());
+        hashController.getUserController().unban("marvinsroom");
+        Assert.assertTrue(hashController.getUserController().isNotBanned("marvinsroom").getBody().notBlocked());
+    }
 }
