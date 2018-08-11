@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ec434a-4bce-4ecd-a27a-16f0d52ecd9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +55,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="3739" />
+          <entry key="java" value="3750" />
           <entry key="json" value="86" />
           <entry key="md" value="288" />
           <entry key="xml" value="13" />
@@ -67,7 +63,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3739" />
+          <entry key="JAVA" value="3750" />
           <entry key="JSON" value="83" />
           <entry key="Markdown" value="288" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -90,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="159">
+              <caret line="56" column="49" lean-forward="true" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -155,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="140">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -225,8 +221,8 @@
         <option value="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/BaseTestBuilder.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" />
-        <option value="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" />
         <option value="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" />
       </list>
     </option>
   </component>
@@ -323,7 +319,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashSet.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533948150054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534022377492" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -358,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HashesMatchedAreBlocked.test">
+  <component name="RunManager" selected="JUnit.Suite">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="markd315.ThreeDamned" />
       <module name="3323493298439213429842353421453" />
@@ -435,17 +431,11 @@
       <workItem from="1533344436385" duration="1178000" />
       <workItem from="1533345655284" duration="129000" />
       <workItem from="1533345813652" duration="6707000" />
-      <workItem from="1533419008512" duration="11808000" />
+      <workItem from="1533419008512" duration="12515000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Suite - 2018.08.10 at 20h 23m 23s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Suite - 2018.08.10 at 20h 23m 43s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Suite - 2018.08.10 at 20h 25m 41s.xml">
       <configuration name="Suite" configurationId="JUnit" />
     </history-entry>
@@ -470,9 +460,15 @@
     <history-entry file="HashesMatchedAreBlocked_test - 2018.08.10 at 20h 41m 08s.xml">
       <configuration name="HashesMatchedAreBlocked.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HashesMatchedAreBlocked_test - 2018.08.10 at 20h 42m 34s.xml">
+      <configuration name="HashesMatchedAreBlocked.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Suite - 2018.08.11 at 17h 18m 46s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19822000" />
+    <option name="totallyTimeSpent" value="20529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1286" height="687" extended-state="0" />
@@ -881,17 +877,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="159">
+          <caret line="56" column="49" lean-forward="true" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="140">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>

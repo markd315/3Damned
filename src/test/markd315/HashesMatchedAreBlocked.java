@@ -14,8 +14,8 @@ public class HashesMatchedAreBlocked extends BaseTestBuilder{
 	public void test() throws IOException {
 	    File testCase = new File("src/main/resources/test/rejectedCase.json"); //One byte, ASCII 56.
 	    Assert.assertFalse(hashController.fileNotOnBlacklist(testCase, null).getBody().notBlocked());
-	    testCase = new File("src/main/resources/test/rejectedCase.json");
+	    testCase = new File("src/main/resources/test/passesCase.json");
 	    hashController.addFile(testCase);
-	    Assert.assertTrue(hashController.fileNotOnBlacklist(testCase, null).getBody().notBlocked());
+	    Assert.assertFalse(hashController.fileNotOnBlacklist(testCase, null).getBody().notBlocked());
 	}
 }
