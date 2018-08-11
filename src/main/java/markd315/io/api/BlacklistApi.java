@@ -85,6 +85,6 @@ public interface BlacklistApi {
         produces = { "application/json", "application/xml" }, 
         consumes = { "application/json", "application/xml" },
         method = RequestMethod.GET)
-    ResponseEntity<QueryResponse> notOnBlacklist(@ApiParam(value = "Unsure design to test", required = true) @PathVariable("hash") String hash, @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)") @RequestHeader(value = "user", required = false) String user);
+    ResponseEntity<QueryResponse> notOnBlacklist(@ApiParam(value = "Unsure design to test", required = true) @PathVariable("hash") String hash, @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)") @RequestHeader(value = "user", required = false) String user) throws IOException;
 
 }

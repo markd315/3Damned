@@ -1,5 +1,6 @@
 package markd315.io.api;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import markd315.io.Boot;
 import markd315.io.model.Hash;
@@ -29,16 +30,19 @@ import javax.validation.Valid;
 @Controller
 public class BlacklistApiController implements BlacklistApi {
 
-    public UserApiController userController = new UserApiController();
-    private static Set<String> hashBlacklist;
-    public static String hashPath;
+    protected UserApiController userController = new UserApiController();
+
+    public static final boolean testMode = true;
+    private Set<String> hashBlacklist;
+    public String hashPath;
     public static final String hashTestPath = "src/main/resources/test/hashTestBlacklist.json";
     public static final String hashProdPath = "src/main/resources/hashBlacklist.json";
 
     public BlacklistApiController(){
-        hashBlacklist = new HashSet<String>();
+        this.hashBlacklist = new HashSet<String>();
         userController = new UserApiController();
         userController.setUserBlacklist(new HashSet<String>());
+        this.loadLists();
     }
 
     public ResponseEntity<Hash> addFile(@ApiParam(value = "Banned design to add" ,required=true )  @Valid @RequestBody java.io.File body) throws IOException {
@@ -60,18 +64,18 @@ public class BlacklistApiController implements BlacklistApi {
 
     public ResponseEntity<QueryResponse> fileNotOnBlacklist(@ApiParam(value = "Unsure design to test" ,required=true )  @Valid @RequestBody java.io.File file,
                                                             @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)" ) @RequestHeader(value="user", required=false) String user) throws IOException {
-        // do some magic!
         String contents = Boot.readFile(file.getPath(), Charset.defaultCharset());
         String hash = toSHA1(contents.getBytes());
         return notOnBlacklist(hash, user);
     }
 
     public ResponseEntity<QueryResponse> notOnBlacklist(@ApiParam(value = "Unsure design to test",required=true ) @PathVariable("hash") String hash,
-        @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)" ) @RequestHeader(value="user", required=false) String user) {
+        @ApiParam(value = "Optional, the user responsible for requesting the design (could be banned if design is blasklisted)" ) @RequestHeader(value="user", required=false) String user) throws IOException {
         if(user != null && !userController.isNotBanned(user).getBody().notBlocked()){
             return new ResponseEntity<QueryResponse>(new QueryResponse().notBlocked(false), HttpStatus.OK);
         }
         if (hashBlacklist.contains(hash)) {
+            userController.banUser(user);
             return new ResponseEntity<QueryResponse>(new QueryResponse().notBlocked(false), HttpStatus.OK);
         }
         return new ResponseEntity<QueryResponse>(new QueryResponse().notBlocked(true), HttpStatus.OK);
@@ -99,5 +103,31 @@ public class BlacklistApiController implements BlacklistApi {
 
     public void setUserController(UserApiController user){
         this.userController = user;
+    }
+
+    public void loadLists(){
+        if(testMode){
+            hashPath = hashTestPath;
+            userController.userPath = userController.userTestPath;
+        }else{
+            hashPath = hashProdPath;
+            userController.userPath = userController.userProdPath;
+        }
+
+        //Loading blacklists into memory
+        ObjectMapper mapper = new ObjectMapper();
+        String json;
+        try {
+            json = Boot.readFile(this.hashPath, Charset.defaultCharset());
+            this.setHashBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            json = Boot.readFile(this.userController.userPath, Charset.defaultCharset());
+            this.getUserController().setUserBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

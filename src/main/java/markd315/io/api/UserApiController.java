@@ -18,10 +18,10 @@ import java.util.Set;
 
 @Controller
 public class UserApiController implements UserApi {
-    private static Set<String> userBlacklist;
+    private Set<String> userBlacklist;
     public static final String userProdPath = "src/main/resources/userBlacklist.json";
     public static final String userTestPath = "src/main/resources/test/userTestBlacklist.json";
-    public static String userPath;
+    public String userPath;
 
     public ResponseEntity<Void> banUser(@ApiParam(value = "Banned user to add",required=true ) @PathVariable("name") String name) throws IOException {
         userBlacklist.add(name);//Ban the user from generating documents in the future.
@@ -31,7 +31,7 @@ public class UserApiController implements UserApi {
     }
 
     public ResponseEntity<QueryResponse> isNotBanned(@ApiParam(value = "Query if user is banned",required=true ) @PathVariable("name") String name) {
-        boolean result = userBlacklist.contains(name);
+        boolean result = !userBlacklist.contains(name);
         QueryResponse body = new QueryResponse();
         body.setNotBlocked(new Boolean(result));
         return new ResponseEntity<QueryResponse>(body, HttpStatus.OK);

@@ -23,41 +23,11 @@ import java.util.Set;
 @ComponentScan(basePackages = { "io.swagger", "io.swagger.api" })
 public class Boot implements CommandLineRunner {
 
-    public static final boolean testMode = true;
 
-    public BlacklistApiController hashController = new BlacklistApiController();
     @Override
     public void run(String... arg0) {
-        this.loadLists();
-
         if (arg0.length > 0 && arg0[0].equals("exitcode")) {
             throw new ExitException();
-        }
-    }
-
-    public void loadLists(){
-        if(testMode){
-            BlacklistApiController.hashPath = BlacklistApiController.hashTestPath;
-            UserApiController.userPath = UserApiController.userTestPath;
-        }else{
-            BlacklistApiController.hashPath = BlacklistApiController.hashProdPath;
-            UserApiController.userPath = UserApiController.userProdPath;
-        }
-
-        //Loading blacklists into memory
-        ObjectMapper mapper = new ObjectMapper();
-        String json;
-        try {
-            json = readFile(BlacklistApiController.hashPath, Charset.defaultCharset());
-            hashController.setHashBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            json = readFile(UserApiController.userPath, Charset.defaultCharset());
-            hashController.getUserController().setUserBlacklist((Set<String>) mapper.readValue(json, new TypeReference<Set<String>>(){}));
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
