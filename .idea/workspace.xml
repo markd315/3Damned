@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9ec434a-4bce-4ecd-a27a-16f0d52ecd9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -13,7 +12,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/3Damned$Suite.ic" NAME="Suite Coverage Results" MODIFIED="1534022411771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/3Damned$Suite.ic" NAME="Suite Coverage Results" MODIFIED="1534022729430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/3Damned$UserBlackListMaintained_unbanWrongIs400.ic" NAME="UserBlackListMaintained.unbanWrongIs400 Coverage Results" MODIFIED="1534022925644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>markd315.*</FILTER>
+    </SUITE>
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="15" />
@@ -32,7 +34,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="5" />
-          <entry key="java" value="60" />
+          <entry key="java" value="61" />
           <entry key="json" value="24" />
           <entry key="md" value="6" />
           <entry key="properties" value="1" />
@@ -44,7 +46,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="61" />
           <entry key="JSON" value="21" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -56,7 +58,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="3809" />
+          <entry key="java" value="3872" />
           <entry key="json" value="86" />
           <entry key="md" value="288" />
           <entry key="xml" value="13" />
@@ -64,7 +66,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3809" />
+          <entry key="JAVA" value="3872" />
           <entry key="JSON" value="83" />
           <entry key="Markdown" value="288" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -75,11 +77,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="63" column="50" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="140">
+              <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -166,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/test/markd315/WrongHashesNotBlocked.java" />
         <option value="$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java" />
         <option value="$PROJECT_DIR$/src/test/markd315/HashesMatchedAreBlocked.java" />
-        <option value="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" />
         <option value="$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java" />
+        <option value="$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java" />
       </list>
     </option>
   </component>
@@ -207,69 +218,6 @@
               <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
               <item name="3Damned" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3Damned" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3Damned" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="markd315" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -280,7 +228,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/HashSet.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534022695244" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534022924867" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -315,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserBlackListMaintained.canUnban">
+  <component name="RunManager" selected="JUnit.UserBlackListMaintained.unbanWrongIs400">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="markd315.ThreeDamned" />
       <module name="3323493298439213429842353421453" />
@@ -366,6 +314,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserBlackListMaintained.unbanWrongIs400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="3323493298439213429842353421453" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="markd315.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="markd315" />
+      <option name="MAIN_CLASS_NAME" value="markd315.UserBlackListMaintained" />
+      <option name="METHOD_NAME" value="unbanWrongIs400" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserBlackListMaintained.userRejectedAfterViolation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="3323493298439213429842353421453" />
       <option name="PACKAGE_NAME" value="markd315" />
@@ -391,9 +355,11 @@
       <item itemvalue="JUnit.UserBlackListMaintained.userRejectedAfterViolation" />
       <item itemvalue="JUnit.HashesMatchedAreBlocked.test" />
       <item itemvalue="JUnit.UserBlackListMaintained.canUnban" />
+      <item itemvalue="JUnit.UserBlackListMaintained.unbanWrongIs400" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserBlackListMaintained.unbanWrongIs400" />
         <item itemvalue="JUnit.UserBlackListMaintained.canUnban" />
         <item itemvalue="JUnit.HashesMatchedAreBlocked.test" />
         <item itemvalue="JUnit.UserBlackListMaintained.userRejectedAfterViolation" />
@@ -410,20 +376,11 @@
       <workItem from="1533344436385" duration="1178000" />
       <workItem from="1533345655284" duration="129000" />
       <workItem from="1533345813652" duration="6707000" />
-      <workItem from="1533419008512" duration="12811000" />
+      <workItem from="1533419008512" duration="13016000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Suite - 2018.08.10 at 20h 30m 16s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Suite - 2018.08.10 at 20h 30m 23s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Suite - 2018.08.10 at 20h 37m 36s.xml">
-      <configuration name="Suite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HashesMatchedAreBlocked_test - 2018.08.10 at 20h 41m 08s.xml">
       <configuration name="HashesMatchedAreBlocked.test" configurationId="JUnit" />
     </history-entry>
@@ -445,9 +402,18 @@
     <history-entry file="UserBlackListMaintained_canUnban - 2018.08.11 at 17h 24m 06s.xml">
       <configuration name="UserBlackListMaintained.canUnban" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserBlackListMaintained_canUnban - 2018.08.11 at 17h 24m 58s.xml">
+      <configuration name="UserBlackListMaintained.canUnban" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Suite - 2018.08.11 at 17h 25m 42s.xml">
+      <configuration name="Suite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserBlackListMaintained_unbanWrongIs400 - 2018.08.11 at 17h 27m 49s.xml">
+      <configuration name="UserBlackListMaintained.unbanWrongIs400" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20825000" />
+    <option name="totallyTimeSpent" value="21030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="1" width="1286" height="683" extended-state="0" />
@@ -485,7 +451,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.10195758" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.21288744" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="0" side_tool="true" />
@@ -534,7 +500,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java</url>
-          <line>25</line>
+          <line>27</line>
           <properties class="markd315.UserBlackListMaintained" method="userRejectedAfterViolation">
             <option name="EMULATED" value="true" />
           </properties>
@@ -542,7 +508,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java</url>
-          <line>34</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -839,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="56" column="49" lean-forward="true" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/model/Hash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -853,20 +812,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="140">
+          <caret line="41" column="65" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/UserApiController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/markd315/io/api/BlacklistApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="187">
+          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/markd315/UserBlackListMaintained.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="63" column="50" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

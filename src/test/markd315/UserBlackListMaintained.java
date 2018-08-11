@@ -5,6 +5,8 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.io.File;
 import java.io.IOException;
@@ -51,5 +53,14 @@ public class UserBlackListMaintained extends BaseTestBuilder {
         Assert.assertFalse(hashController.getUserController().isNotBanned("marvinsroom").getBody().notBlocked());
         hashController.getUserController().unban("marvinsroom");
         Assert.assertTrue(hashController.getUserController().isNotBanned("marvinsroom").getBody().notBlocked());
+    }
+
+    @Test
+    public void unbanWrongIs400() throws IOException {
+        Assert.assertFalse(hashController.getUserController().isNotBanned("marvinsroom").getBody().notBlocked());
+        ResponseEntity<Void> response = hashController.getUserController().unban("marvinsroom");
+        Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
+        response = hashController.getUserController().unban("marvinsroom");
+        Assert.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
     }
 }
